@@ -8,4 +8,5 @@ molecule>=2.6
 testinfra>=1.10
 python-vagrant>=0.5.15
 paramiko
-apache-libcloud
+requests
+google-auth
