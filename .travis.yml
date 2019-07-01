@@ -9,9 +9,9 @@ script:
 - molecule verify
 after_script:
 - molecule destroy
-before_install:
-- curl https://gist.githubusercontent.com/iphizic/0323c2cd417e101e981df03e2bd6a3d9/raw/run_my_tets.sh |
-  bash
+#before_install:
+#- curl https://gist.githubusercontent.com/iphizic/0323c2cd417e101e981df03e2bd6a3d9/raw/run_my_tets.sh |
+#  bash
 notifications:
   slack:
     rooms:
