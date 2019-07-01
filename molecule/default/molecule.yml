@@ -9,9 +9,9 @@ lint:
   name: yamllint
 platforms:
   - name: instance-travis
-    zone: europe-west1-b
+    zone: europe-west4-b
     machine_type: f1-micro
-    image: ubuntu-1604-xenial
+    image: ubuntu-1604-lts
 provisioner:
   name: ansible
   lint:
