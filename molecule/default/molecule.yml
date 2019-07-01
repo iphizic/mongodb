@@ -8,7 +8,7 @@ platforms:
   - name: instance-travis
     zone: europe-west4-b
     machine_type: f1-micro
-    image: europe-west4-b
+    image: ubuntu-1604-lts
 provisioner:
   name: ansible
   lint:
