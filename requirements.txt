@@ -1,0 +1,10 @@
+ansible >= 2.7
+passlib
+netaddr
+pyOpenSSL
+jmespath
+argparse
+molecule>=2.6
+testinfra>=1.10
+python-vagrant>=0.5.15
+paramiko
