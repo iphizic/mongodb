@@ -1,9 +1,8 @@
----
 - name: Create
   hosts: localhost
   connection: local
   gather_facts: False
-  #no_log: "{{ not lookup('env', 'MOLECULE_DEBUG') | bool }}"
+  no_log: "{{ not lookup('env', 'MOLECULE_DEBUG') | bool }}"
   vars:
     molecule_file: "{{ lookup('env', 'MOLECULE_FILE') }}"
     molecule_instance_config: "{{ lookup('env', 'MOLECULE_INSTANCE_CONFIG') }}"
@@ -13,9 +12,6 @@
     ssh_user: "{{ lookup('env', 'USER') }}"
     ssh_identity_file: "{{ lookup('env', 'HOME') }}/.ssh/google_compute_engine"
   tasks:
-    - debug:
-        msg: "{{ lookup('env', 'GCE_CREDENTIALS_FILE') }}"
-
     - name: Create molecule instance(s)
       gce:
         instance_names: "{{ item.name }}"
